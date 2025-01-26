@@ -8,33 +8,33 @@ Welcome to the Rust Dev Container tutorial! This guide will help you set up a de
 
 ## __Prerequisites__
 
-Before getting started, make sure you have:  
-1. __Visual Studio Code (VSCode)__.<br>
-2. __Docker__ installed and running.<br>
-3. __Git installed__<br>
-4. __A Github account__<br>
-5. Basic familiarity with Git and the command line.<br>
-<br>
+Before getting started, make sure you have:
 
+1. __Visual Studio Code (VSCode)__.
+2. __Docker__ installed and running.
+3. __Git installed__
+4. __A Github account__
+5. Basic familiarity with Git and the command line.
+
+<br>
 # Part 1. Project Setup: Creating the Repository
 
 ## __Step 1: Starting a Blank Directory__
 
 1. Open your terminal or command prompt.
-
 2. Create a Local Directory and navigate into it
-```
+```bash
 mkdir rust-project
 cd rust-project
 ```
 
 3. Initialize a new Git repository:
-```
+```bash
 git init
 ```
 
 4. Create a README file:
-```
+```bash
 echo "# Rust project using dev container" > README.md
 git add README.md
 git commit -m "Initial commit with README"
@@ -56,7 +56,7 @@ git commit -m "Initial commit with README"
 ## __Step 3. Link your Local Repository to GitHub__
 
 1.  Add the GitHub repository as a remote:
-```
+```bash
 git remote add origin https://github.com/<your-username>/rust-dev-container-guide.git
 ```
 
@@ -83,7 +83,7 @@ Replace ```<your-username>``` with your GitHub username.
 
 4. Within ```devcontainer.json``` insert the following:
 
-```
+``` json
 {
     "name": "Rust Dev Container",
     "image": "mcr.microsoft.com/devcontainers/rust:latest",
@@ -120,7 +120,7 @@ Once your dev container setup completes, close the current terminal tab (trash c
 
 In the terminal inside the container, create a new Rust binary project and navigate into it:
 
-```
+```bash
 cargo new hello-comp423 --vcs none
 cd hello-comp423
 ```
@@ -132,7 +132,7 @@ cd hello-comp423
 ## __Step 2. Write the Simple Program__
 
 Edit ```src/main.rs``` to the following:
-```
+```rust
 fn main() {
     println!("Hello COMP423");
 }
@@ -144,7 +144,7 @@ fn main() {
 ## __Step 1. Compile the Program__
 
 In the terminal run the following command:
-```
+```bash
 cargo build
 ```
 
@@ -156,21 +156,15 @@ cargo build
 
 To run the executable, you can use the following command from the project root directory:
 
-```
+```bash
 ./target/debug/hello-comp423
-```
-
-If you are using Windows, the command will be:
-
-```
-.\target\debug\hello-comp423.exe
 ```
 
 ## __Alternative to Build__
 
 In the terminal run the following command:
 
-```
+```bash
 cargo run
 ```
 
