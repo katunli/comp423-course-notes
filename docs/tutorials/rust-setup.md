@@ -174,3 +174,9 @@ cargo run
 # Conclusion
 
 With this setup, you're ready to dive into Rust development with a fully functional and isolated Dev Container!
+
+!!! Inspiration
+
+    Tutorial inspired by: [Starting a Static Website Project with MkDocs](https://comp423-25s.github.io/resources/MkDocs/tutorial/)
+    
+
